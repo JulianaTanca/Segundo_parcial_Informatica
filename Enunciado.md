@@ -1,8 +1,10 @@
-Una empresa produce un equipamiento de automatización electrónica, que genera un archivo
+# Enunciado
+Una empresa produce un equipamiento de automatización electrónica, que genera un archivo 
 "monitoreo.dat" donde están almacenadas las anomalías registradas por 25 sensores (S1 a S25)
 de una planta farmacéutica desde las 7 hasta las 22hs, lo que conforma una matriz de 25 
 filas y 16 columnas. /
 Se pide que el programa realice las siguientes tareas:
+
 a- Leer el archivo en una matriz de 25x16.
 b- Mostrar en forma mínimamente organizada todos los datos leídos.
 c- Presentar un menú repetitivo con las siguientes opciones:
