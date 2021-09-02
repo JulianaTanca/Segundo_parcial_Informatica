@@ -32,17 +32,17 @@ main ()
  // Punto B //
  printf("sensor/hora");
  
- for(i=0, j<16, j++)
+ for(i=0; j<16; j++)
  { printf( "%d \t", j+7);
  }
  
  printf("\n");
- for(i=0, i<25, i++)
+ for(i=0; i<25; i++)
  { printf("s %d", i+1);
-  for(j=0, j<16, j++)
-  {printf("%d \t", anomalias[i][j]);
+  for(j=0; j<16; j++)
+  { printf("%d \t", anomalias[i][j]);
   }
-  printf("\n");
+   printf("\n");
  }
  
  // Punto C //
@@ -79,5 +79,40 @@ main ()
     }} while(opcion !=8);
      return 0;
     }
-                     
-       
+    
+    // Punto 1 //
+     void cantprom(mat[][16], nf, nc)
+       { int i, j, suma=0, cantidad;
+         float prom;
+         for(i=0; i<nf; i++)
+         { for(j=0; j<nc; j++)
+          { suma= suma + mat[i][j];
+          }
+         }
+         cantidad= nf*nc;
+         prom= suma/(float)cantidad;
+         print("El promedio es de %f", prom);
+         return;
+         }
+     
+    // Punto 2 //
+       void cantmax(mat[][16], nf, nc)
+         { int i, j, maximo=0;
+           for(i=0; i<nf, i++)
+           { for(j=0, j<nc, j++)
+             { if(mat[i][j]> maximo)
+               { maximo=mat[i][j];
+               }
+             }
+           }
+           printf("El maximo es %d y sucede en los siguientes sensores y horas \n", maximo);
+           for(i=0, i<nf, i++)
+           { for(j=0, j<nc, j++)
+              { if( mat[i][j]==maximo)
+                 { printf("%d \t %d", j+7, i+1);
+                 }
+              }
+           }
+           return;
+          }
+                        
